@@ -1,0 +1,49 @@
+@media (max-width: 200px) {
+  .visible-print-1 {
+    visibility: visible; } }
+
+@media (max-width: 400px) {
+  .visible-print-2 {
+    visibility: visible; } }
+
+@media (max-width: 600px) {
+  .visible-print-3 {
+    visibility: visible; } }
+
+@media (max-width: 800px) {
+  .visible-print-4 {
+    visibility: visible; } }
+
+@media (max-width: 1000px) {
+  .visible-print-5 {
+    visibility: visible; } }
+
+@media (max-width: 1200px) {
+  .visible-print-6 {
+    visibility: visible; } }
+
+@media (max-width: 200px) {
+  .hidden-print-1 {
+    visibility: hidden; } }
+
+@media (max-width: 400px) {
+  .hidden-print-2 {
+    visibility: hidden; } }
+
+@media (max-width: 600px) {
+  .hidden-print-3 {
+    visibility: hidden; } }
+
+@media (max-width: 800px) {
+  .hidden-print-4 {
+    visibility: hidden; } }
+
+@media (max-width: 1000px) {
+  .hidden-print-5 {
+    visibility: hidden; } }
+
+@media (max-width: 1200px) {
+  .hidden-print-6 {
+    visibility: hidden; } }
+
+/*# sourceMappingURL=print.css.map */

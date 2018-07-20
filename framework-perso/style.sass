@@ -1,0 +1,307 @@
+.container
+    width: 50%
+    margin: auto
+
+.container-fluid
+    width: 100%
+    height: 100%
+
+@media (min-width: 640px)
+    .row
+        display: flex
+
+    $class-slug: col !default
+    @for $i from 1 through 12
+        .#{$class-slug}-#{$i}
+            width: 100%
+            padding: 3px
+            height: 100%
+
+@media (max-width: 639px)
+    .row
+        display: flex
+        flex-wrap: wrap
+
+    $xs: col-sm !default
+    @for $i from 1 through 12
+        .#{$xs}-#{$i}
+            width: 100%
+            padding: 3px
+            height: 100%
+
+@mixin bouton
+    text-align: center
+    border-radius: 4px
+    color: white
+    text-decoration: none
+    padding: 6px
+    box-shadow: 3px 3px 0 grey 
+    &:active
+        box-shadow: 3px 3px 0 grey inset
+    &:hover
+        opacity: 0.8
+
+.btn-primary
+    @include bouton
+    background-color: #007bff
+
+.btn-secondary
+    @include bouton
+    background-color: #6c757d
+
+.btn-sucess
+    @include bouton
+    background-color: #28a745
+
+.btn-danger
+    @include bouton
+    background-color: #dc3545
+
+.btn-warning
+    @include bouton
+    background-color: #ffc107
+    color: black
+
+.btn-info
+    @include bouton
+    background-color: #17a2b8
+
+.btn-light
+    @include bouton
+    background-color: #f8f9fa
+    color: black
+
+.btn-dark
+    @include bouton
+    background-color: #343a40
+
+$size-bouton: 10
+$btn: btn !default
+@for $i from 1 through 12
+    .#{$btn}-#{$i}
+        width: 12px*$size-bouton*$i 
+        height: 7px*$i
+        padding: 3px
+
+@media (max-width: 600px) 
+    .img-responsive
+        width: 75%
+
+@media (max-width: 350px)
+    .img-responsive 
+        width: 100%
+
+@mixin frite
+    border: 1px solid black
+    padding: 5px
+
+@mixin radius
+    border-radius: 10px
+
+@mixin cercle
+    border-radius: 50%
+
+@mixin blur
+    filter: blur(5px)
+
+.img-thumbail //vignette
+    @include frite
+    @include radius
+
+.img-rounded //bord arrondis
+    @include radius
+
+.img-circle //arrondir les bords
+    @include cercle
+
+.img-blur //flouter image
+    @include blur
+
+@mixin color
+    color: $color
+    a
+        text-decoration: none
+        color: $color
+    a:hover
+        color: $color
+        text-decoration: none
+    a:focus
+        color: $color
+        text-decoration: none
+    a:active
+        color: $color
+        text-decoration: none
+
+$color: #7e7585 
+.text-muted
+    @include color
+
+$color: #5f83ff
+.text-primary
+    @include color
+
+$color: #28a745
+.text-sucess
+    @include color
+
+$color: #17a2b8
+.text-info
+    @include color
+
+$color: #ffc207
+.text-warning
+    @include color
+
+$color: #de3550
+.text-error
+    @include color
+
+@mixin bg 
+    background-color: $steack
+    padding: 3px
+
+$steack: #007bff
+.bg-primary
+    @include bg
+
+$steack: #6c757d
+.bg-secondary
+    @include bg
+
+$steack: #28a745
+.bg-sucess
+    @include bg
+
+$steack: #dc3545
+.bg-danger
+    @include bg
+
+$steack: #ffc107
+.bg-warning
+    @include bg
+
+$steack: #17a2b8
+.bg-info
+    @include bg
+
+$steack: #f8f9fa
+.bg-light
+    @include bg
+
+$steack: #343a40
+.bg-dark
+    @include bg
+
+$steack: #ffffff
+.bg-white
+    @include bg
+
+@mixin alert
+    color: $text-alert
+    background-color: $back-alert
+    border-radius: 6px 
+
+$text-alert: #155724
+$back-alert: #d4edda
+.alert-success
+    @include alert
+
+$text-alert: #375460
+$back-alert: #d1ecf1
+.alert-info
+    @include alert
+
+$text-alert: #ae6804
+$back-alert: #fff3cd
+.alert-warning
+    @include alert
+
+$text-alert: #721c3a
+$back-alert: #f8d7da
+.alert-danger
+    @include alert
+
+$voi: 2
+$void: visible !default
+@for $i from 1 through 6
+    .#{$void}-#{$i}
+        @media (max-width: 100px*$voi*$i)
+            visibility: visible
+
+$visibi: 2
+$visi: hidden !default
+@for $i from 1 through 6
+    .#{$visi}-#{$i}
+        @media (max-width: 100px*$visibi*$i)
+            visibility: hidden
+
+    //NAVBARS//////////////////////////////////////////////////////////////////////////////////////////////
+@mixin navbars
+    display: flex
+    justify-content: space-around
+    color: #f3ece2
+    border-radius: 6px
+    border: 1px solid black
+    padding: 20px
+    text-shadow: 2px 2px 0 #8b847e
+    background-image: url('imagenavbars/raphael.jpg')
+    font:
+        size: 23px
+        weight: bold
+        family: 'URW Chancery L', Arial
+    &.li
+        list-style-type: none
+    &select, &input
+        border-radius: 6px
+        font:
+            size: 20px
+            family: 'URW Chamcery L', Arial
+    select
+        background-color: #f1af89
+        color: white
+        text-shadow: 2px 2px 0 #8b847e
+        border:
+            style: 3px groove
+            color: #a4585e 
+    input
+        color: #a4585e
+        font-family: 'Purisa', Arial
+        background-color: #faf5e2
+        border-style: double
+
+@media (max-width: 300px)
+    .navbars
+        display: flex
+        flex-direction: column
+        @include navbars
+
+@media (max-width: 600px) and (min-width: 301px)
+    .navbars
+        display: flex
+        flex-direction: column
+        text-align: center
+        // font-size: 25px
+        @include navbars
+
+@media (min-width: 600px)
+    .navbars
+        flex-wrap: wrap
+        @include navbars
+
+//POPINS///////////////////////////////////////////////////////////////////////////////////////////////////
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+        

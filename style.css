@@ -1,0 +1,89 @@
+h5
+{
+    font-size: 0px;
+}
+
+body
+{
+    background-image: url('image/fond.jpg');
+}
+
+section
+{
+    padding: 1%;
+    border: 1px solid white;
+    border-radius: 6px;
+    width: 30%;
+    margin: auto;
+    /* text-align:center; */
+    box-shadow: 3px 3px 0 grey;
+    background-color: rgba(255,255,255, 0.4);
+    /*opacity: 0.6;*/
+    margin-top: 2%;
+}
+
+h1
+{
+    font-size: 100px;
+    font-family: 'URW Chancery L', Symbola;
+    margin: auto;
+    color:#ac0415;
+    text-shadow: 6px -5px 2px antiquewhite;
+}
+
+h3
+{
+    font-size: 30px;
+    font-family: 'Nimbus Mono L';
+    color:#7a0539;
+}
+
+article
+{
+    font-size: 23px;
+}
+
+h4
+{
+    font-size: 17px;
+    font-family: 'Nimbus Mono L';
+}
+
+table
+{
+    /*background-color: darkred;*/
+    margin: auto;
+}
+
+.valider
+{
+    font-size: 20px;
+    /*margin: auto;*/
+    /*marin-top: 10%;*/
+    text-align: center;
+    /*background-color: red;*/
+}
+
+input
+{
+    background-color: white;
+    color:#02600c;
+}
+
+img
+{
+    width: 126px;
+    height: 145px;
+}
+
+td
+{
+    font-family: 'FreeMono';
+    letter-spacing: -2px;
+    word-spacing: -3px;
+}
+
+a
+{
+    color:#02600c;
+}

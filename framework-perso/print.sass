@@ -1,0 +1,13 @@
+$visibi: 2
+$visi: visible-print !default
+@for $i from 1 through 6
+    .#{$visi}-#{$i}
+        @media (max-width: 100px*$visibi*$i)
+            visibility: visible
+
+$voi: 2
+$void: hidden-print !default
+@for $i from 1 through 6
+    .#{$void}-#{$i}
+        @media (max-width: 100px*$voi*$i)
+            visibility: hidden

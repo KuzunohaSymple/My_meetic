@@ -1,0 +1,19 @@
+ul
+{
+    display: flex;
+    justify-content: center;
+}
+
+li
+{
+    list-style-type: none;
+    font-size: 20px;
+    border: 1px solid grey;
+    margin: 1%;
+    padding: 2px;
+}
+
+nav
+{
+    background-image: url('../image/raphael.jpg');
+}
