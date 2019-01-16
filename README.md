@@ -19,4 +19,5 @@ TECHNOLOGIE UTILISE :
 -HTML 5
 -CSS 3
 -MySQL
+-SASS
 - Utilisation de mon propre famework CSS créer avec la technologie SASS pour la navbar. 
